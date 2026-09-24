@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get Well Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8ea;
+    --peach: #ffe0bd;
+    --coral: #ff8fa3;
+    --rose-deep: #ef6b83;
+    --sage: #8fbf8a;
+    --sun: #ffcb61;
+    --ink: #6b4a3a;
+    --ink-soft: #a5806f;
+    --card: #fffdf8;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --cream: #241a12; --card: #2c2018; --ink: #f3e6d8; --ink-soft: #cbab97;
+    }
+  }
+  :root[data-theme="dark"] { --cream: #241a12; --card: #2c2018; --ink: #f3e6d8; --ink-soft: #cbab97; }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    min-height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    background:
+      radial-gradient(circle at 20% 10%, var(--peach), transparent 50%),
+      radial-gradient(circle at 85% 90%, #ffd9e2, transparent 45%),
+      var(--cream);
+    font-family: "Quicksand", sans-serif;
+    color: var(--ink);
+  }
+
+  .card {
+    width: 100%; max-width: 360px;
+    background: var(--card);
+    border-radius: 28px;
+    padding: 38px 30px 34px;
+    text-align: center;
+    box-shadow: 0 24px 50px rgba(150, 90, 70, 0.16);
+  }
+
+  .bloom { width: 96px; height: 96px; margin: 0 auto 14px; animation: sway 3.5s ease-in-out infinite; }
+  @keyframes sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+
+  h1 {
+    margin: 6px 0 4px;
+    font-size: 27px; font-weight: 700;
+    color: var(--rose-deep);
+  }
+  .sub { margin: 0 0 20px; font-size: 14px; letter-spacing: 0.04em; color: var(--sage); font-weight: 600; }
+
+  p.msg {
+    margin: 0; font-size: 16.5px; line-height: 1.65; font-weight: 500; color: var(--ink-soft);
+  }
+
+  .divider { width: 46px; height: 3px; margin: 22px auto; border-radius: 3px; background: var(--sun); }
+
+  .sign { font-size: 15px; color: var(--ink); font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bloom { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <svg class="bloom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(50,54)">
+        <ellipse rx="14" ry="22" fill="#ff8fa3" transform="rotate(0)"/>
+        <ellipse rx="14" ry="22" fill="#ffa8ba" transform="rotate(72)"/>
+        <ellipse rx="14" ry="22" fill="#ff8fa3" transform="rotate(144)"/>
+        <ellipse rx="14" ry="22" fill="#ffa8ba" transform="rotate(216)"/>
+        <ellipse rx="14" ry="22" fill="#ff8fa3" transform="rotate(288)"/>
+        <circle r="11" fill="#ffcb61"/>
+      </g>
+      <path d="M50 76 C 46 88, 34 90, 26 86" stroke="#8fbf8a" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M32 82 C 30 78, 24 77, 20 79" stroke="#8fbf8a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <p class="sub">sending you sunshine</p>
+    <h1>Get Well Soon</h1>
+
+    <p class="msg">
+      <!-- ✏️ Personalize this message -->
+      Heard you're not feeling your best, and I just wanted to remind you
+      how loved you are. Rest up, drink your fluids, and let people take
+      care of you for once. I'm right here.
+    </p>
+
+    <div class="divider"></div>
+    <p class="sign">— thinking of you 💛</p>
+  </div>
+
+</body>
+</html>
